@@ -12,7 +12,7 @@ print(f'max_score: {max_score}')
 winning_index= np.where(player_totals == max_score)[0]
 plt.title('dice game')
 plt.xlabel('players')
-plt.ylabel('total points')
+plt.ylabel('total points:')
 print(f' winner is: {winning_index +1}')
 plt.bar(players[winning_index], player_totals[winning_index], color='blue')
 plt.show()
