@@ -1,5 +1,7 @@
 #always switching
 import random
+import numpy as np
+import matplotlib.pyplot as plt
 
 simulations = abs(int(input('how many simulations? ')))
 wins = 0
@@ -34,3 +36,12 @@ print(f'strategy name: {strat_name}')
 print(f'wins {strat_name}: {wins}')
 print(f'losses {strat_name}: {losses}')
 print(f'winning %: {wins / simulations * 100:.4f}%')
+values = [wins, losses]
+
+plt.pie(values,
+        colors=['coral', 'orange'],
+        labels=['wins', 'losses'],
+        autopct='%1.1f%%',
+        shadow=True,
+        explode=[0,0.1],)
+plt.show()
